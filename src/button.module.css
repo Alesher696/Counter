@@ -1,0 +1,39 @@
+.button{
+background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin-inline: 2px;
+    border-radius: 3px;
+    width: 100px;
+}
+.valueRed{
+    color: red;
+    font-size: 30px;
+}
+.buttonDisabled{
+    background-color: #545454;
+    color: #313131;
+    border-color: #545454;
+}
+
+.counter{
+    background-color: #b2b2b2;
+    border: 1px solid #6431c0;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 5px;
+    padding: 5px;
+    align-content: center;
+    alignment-baseline: center;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.value{
+    align-items: center;
+    display: inline;
+    padding-left: 120px;
+}
