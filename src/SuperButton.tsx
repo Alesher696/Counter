@@ -1,16 +1,17 @@
 import React from 'react';
 import b from './button.module.css'
+import {Button} from "@mui/material";
 
 
-type SuperButtonPropsType = {
+export type SuperButtonPropsType = {
     title: string
     clickHandler: () => void
     disabled?: boolean | undefined
-    value: number
+
 }
 
 export const SuperButton: React.FC<SuperButtonPropsType> = (props) => {
-    const {title, clickHandler, value, ...otherProps} = props
+    const {title, clickHandler, ...otherProps} = props
 
     const onclickHandler = () => {
         clickHandler()
@@ -20,12 +21,13 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (props) => {
 
     return (
         <div>
-            <button
+            <Button
+                variant="contained"
                 onClick={onclickHandler}
                 className={buttonStyle}
                 disabled={props.disabled}
             >{title}
-            </button>
+            </Button>
         </div>
     );
 };

@@ -1,39 +1,64 @@
-.button{
-background-color: black;
+body {
+    background-color: rgba(23, 23, 23, 0.92);
+}
+
+.button {
+    background-color: black;
     color: white;
     border: 1px solid black;
-    margin-inline: 2px;
     border-radius: 3px;
-    width: 100px;
+    width: 50px;
+    height: 20px;
+
 }
-.valueRed{
+
+.valueRed {
     color: red;
     font-size: 30px;
 }
-.buttonDisabled{
+
+.value {
+    position: absolute;
+    top: 40px;
+
+}
+
+.buttonDisabled {
     background-color: #545454;
     color: #313131;
     border-color: #545454;
 }
 
-.counter{
-    background-color: #b2b2b2;
-    border: 1px solid #6431c0;
+.counter {
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ffffff;
     width: 250px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 20px;
     border-radius: 5px;
     padding: 5px;
     align-content: center;
     alignment-baseline: center;
 }
-.buttons{
+
+.buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+
 }
-.value{
+
+.value {
     align-items: center;
     display: inline;
     padding-left: 120px;
+}
+
+.setArea {
+    position: relative;
+    left: 90px;
+    top: 10px;
 }

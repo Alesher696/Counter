@@ -6,24 +6,26 @@ type CounterPropsType = {
     value: number
     click: () => void
     reset: () => void
+    min: number
+    max: number
 }
 
 export const Counter: React.FC<CounterPropsType> = (props) => {
     const { value,  click,  reset } = props
 
-    let title = {
+     let title = {
         title1: 'inc',
-        title2: 'reset'
+        title2: 'reset',
     }
 
-    const maxValueStyle = `${b.value} ${props.value === 5 ? b.valueRed : ''} `
+    const maxValueStyle = `${b.value} ${props.value === props.max ? b.valueRed : ''} `
 
-    const DisablerInc = props.value === 5
-    const DisablerReset = props.value === 0
+    const DisablerInc = props.value === props.max
+    const DisablerReset = props.value === props.min
 
     return (
         <div className={b.counter}>
-            <div className={maxValueStyle}>
+            <div className={`${maxValueStyle}`}>
                 {value}
             </div>
 
@@ -33,7 +35,6 @@ export const Counter: React.FC<CounterPropsType> = (props) => {
                     title={title.title1}
                     clickHandler={click}
                     disabled={DisablerInc}
-                    value={value}
                 />
             </div>
 
@@ -41,7 +42,6 @@ export const Counter: React.FC<CounterPropsType> = (props) => {
                 <SuperButton
                     title={title.title2}
                     clickHandler={reset}
-                    value={value}
                     disabled={DisablerReset}
                 />
             </div>
